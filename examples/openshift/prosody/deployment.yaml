@@ -22,7 +22,7 @@ objects:
               name: jitsi-config
           - secretRef:
               name: jitsi-secret
-          image: jitsi/prosody
+          image: styke/jitsi-prosody:jitsi-meet_5142
           imagePullPolicy: Always
           name: prosody
           readinessProbe:
