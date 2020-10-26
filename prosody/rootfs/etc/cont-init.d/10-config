@@ -1,8 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-if [[ ! -f /etc/saslauthd.conf ]]; then
-  tpl /defaults/saslauthd.conf > /etc/saslauthd.conf
-fi
+tpl /defaults/saslauthd.conf > /etc/saslauthd.conf
 
 PROSODY_CFG="/config/prosody.cfg.lua"
 
