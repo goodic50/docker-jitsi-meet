@@ -1,4 +1,4 @@
-ARG JITSI_REPO=goodic
+ARG JITSI_REPO=jitsi
 
 FROM ${JITSI_REPO}/base as builder
 
