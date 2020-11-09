@@ -1,4 +1,4 @@
-ARG JITSI_REPO=jitsi
+ARG JITSI_REPO=goodic
 FROM ${JITSI_REPO}/base-java
 
 RUN \

@@ -1,4 +1,4 @@
-ARG JITSI_REPO=jitsi
+ARG JITSI_REPO=goodic
 FROM ${JITSI_REPO}/base-java
 
 #ARG CHROME_RELEASE=latest
@@ -23,10 +23,10 @@ RUN \
 	|| true
 
 RUN \
-        [ "${CHROME_RELEASE}" != "latest" ] \
-        && curl -4so "/tmp/google-chrome-stable_${CHROME_RELEASE}-1_amd64.deb" "http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_RELEASE}-1_amd64.deb" \
+	[ "${CHROME_RELEASE}" != "latest" ] \
+	&& curl -4so "/tmp/google-chrome-stable_${CHROME_RELEASE}-1_amd64.deb" "http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-stable/google-chrome-stable_${CHROME_RELEASE}-1_amd64.deb" \
 	&& apt-dpkg-wrap apt-get update \
-        && apt-dpkg-wrap apt-get install -y "/tmp/google-chrome-stable_${CHROME_RELEASE}-1_amd64.deb" \
+	&& apt-dpkg-wrap apt-get install -y "/tmp/google-chrome-stable_${CHROME_RELEASE}-1_amd64.deb" \
 	&& apt-cleanup \
 	|| true
 
@@ -40,9 +40,9 @@ RUN \
 	&& chromedriver --version
 
 RUN \
-        apt-dpkg-wrap apt-get update \
-        && apt-dpkg-wrap apt-get install -y jitsi-upload-integrations jq \
-        && apt-cleanup
+	apt-dpkg-wrap apt-get update \
+	&& apt-dpkg-wrap apt-get install -y jitsi-upload-integrations jq \
+	&& apt-cleanup
 
 COPY rootfs/ /
 

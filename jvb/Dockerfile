@@ -1,9 +1,9 @@
-ARG JITSI_REPO=jitsi
+ARG JITSI_REPO=goodic
 FROM ${JITSI_REPO}/base-java
 
 RUN \
 	apt-dpkg-wrap apt-get update && \
-	apt-dpkg-wrap apt-get install -y jitsi-videobridge2 jq curl iproute2 jq& & \
+	apt-dpkg-wrap apt-get install -y jitsi-videobridge2 jq curl iproute2 jq && \
 	apt-cleanup
 
 COPY rootfs/ /

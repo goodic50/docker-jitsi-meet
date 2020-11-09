@@ -1,4 +1,4 @@
-ARG JITSI_REPO=jitsi
+ARG JITSI_REPO=goodic
 FROM ${JITSI_REPO}/base
 
 ENV JAVA_SYS_PROPS "-Djava.util.prefs.userRoot=/root"
