@@ -82,28 +82,4 @@ if [[ ! -f /config/interface_config.js ]]; then
             -e "s#'closedcaptions', ##" \
             /config/interface_config.js
     fi
-    # It will remove parameter 'livestreaming' from TOOLBAR_BUTTONS if ENABLE_LIVESTREAMING is false,
-    if [[ $ENABLE_LIVESTREAMING -ne 1 && "$ENABLE_LIVESTREAMING" != "true" ]]; then
-        sed -i \
-            -e "s#'livestreaming', ##" \
-            /config/interface_config.js
-    fi
-    # It will remove parameter 'videobackgroundblur' from TOOLBAR_BUTTONS if ENABLE_VIDEOBACKGROUNDBLUR is false,
-    if [[ $ENABLE_VIDEOBACKGROUNDBLUR -ne 1 && "$ENABLE_VIDEOBACKGROUNDBLUR" != "true" ]]; then
-        sed -i \
-            -e "s#'videobackgroundblur', ##" \
-            /config/interface_config.js
-    fi
-    # It will remove parameter 'embedmeeting' from ENABLE_EMBEDMEETING if ENABLE_EMBEDMEETING is false,
-    if [[ $ENABLE_EMBEDMEETING -ne 1 && "$ENABLE_EMBEDMEETING" != "true" ]]; then
-        sed -i \
-            -e "s#'embedmeeting', ##" \
-            /config/interface_config.js
-    fi
-    # It will remove parameter 'sharedvideo' from ENABLE_SHAREVIDEO if ENABLE_SHAREVIDEO is false,
-    if [[ $ENABLE_SHAREVIDEO -ne 1 && "$ENABLE_SHAREVIDEO" != "true" ]]; then
-        sed -i \
-            -e "s#'sharedvideo', ##" \
-            /config/interface_config.js
-    fi
 fi

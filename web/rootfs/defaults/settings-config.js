@@ -18,10 +18,6 @@
 {{ $ENABLE_TALK_WHILE_MUTED := .Env.ENABLE_TALK_WHILE_MUTED | default "false" | toBool -}}
 {{ $ENABLE_TCC := .Env.ENABLE_TCC | default "true" | toBool -}}
 {{ $ENABLE_TRANSCRIPTIONS := .Env.ENABLE_TRANSCRIPTIONS | default "false" | toBool -}}
-{{ $ENABLE_LIVESTREAMING:= .Env.ENABLE_LIVESTREAMING | default "false" | toBool -}}
-{{ $ENABLE_VIDEOBACKGROUNDBLUR:= .Env.ENABLE_VIDEOBACKGROUNDBLUR | default "false" | toBool -}}
-{{ $ENABLE_EMBEDMEETING:= .Env.ENABLE_EMBEDMEETING | default "false" | toBool -}}
-{{ $ENABLE_SHAREVIDEO:= .Env.ENABLE_SHAREVIDEO | default "false" | toBool -}}
 {{ $RESOLUTION := .Env.RESOLUTION | default "720" -}}
 {{ $RESOLUTION_MIN := .Env.RESOLUTION_MIN | default "180" -}}
 {{ $RESOLUTION_WIDTH := .Env.RESOLUTION_WIDTH | default "1280" -}}
